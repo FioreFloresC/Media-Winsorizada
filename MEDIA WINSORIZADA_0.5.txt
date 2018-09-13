@@ -1,0 +1,11 @@
+media.winsor<-function(x,y)
+{f<-sort(x)
+g<- (y/2)*length(x)
+if(g-floor(g)==0.5)g<-ceiling(g)
+else{g<-round(g)}
+z<- 0
+h<-g+2
+k<-length(x)-g-1
+for(i in h:k)z<-z+f[i]
+w<-(g+1)*f[g+1]+(g+1)*f[length(x)-g]+z
+print(w/length(x))}

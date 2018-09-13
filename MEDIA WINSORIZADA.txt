@@ -1,0 +1,9 @@
+media.winsor<-function(x,y)
+{f<-sort(x)
+g<- round((y/2)*length(x))
+z<- 0
+h<-g+2
+k<-length(x)-g-1
+for(i in h:k)z<-z+f[i]
+w<-(g+1)*f[g+1]+(g+1)*f[length(x)-g]+z
+print(w/length(x))}
